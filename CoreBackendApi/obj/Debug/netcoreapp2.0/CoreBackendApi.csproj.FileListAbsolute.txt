@@ -1,0 +1,11 @@
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\bin\Debug\netcoreapp2.0\CoreBackendApi.deps.json
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\bin\Debug\netcoreapp2.0\CoreBackendApi.runtimeconfig.json
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\bin\Debug\netcoreapp2.0\CoreBackendApi.runtimeconfig.dev.json
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\bin\Debug\netcoreapp2.0\CoreBackendApi.dll
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.csproj.CoreCompileInputs.cache
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.AssemblyInfoInputs.cache
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.AssemblyInfo.cs
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\bin\Debug\netcoreapp2.0\CoreBackendApi.pdb
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.dll
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.pdb
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.csprojResolveAssemblyReference.cache
