@@ -24,6 +24,11 @@ namespace CoreBackendApi.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
+            Startup.log.Info("id="+id);
+            Startup.log.Debug("Debug=" + id);
+            Startup.log.Trace("Trace=" + id);
+            Startup.log.Warn("Warn=" + id);
+            Startup.log.Error("Error=" + id);
             return "value";
         }
 

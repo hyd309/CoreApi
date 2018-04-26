@@ -12,16 +12,26 @@ using Microsoft.IdentityModel.Tokens;
 using CoreBackendApi.Services;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Mvc;
+using NLog.Extensions.Logging;
+using NLog.Web;
+using System.IO;
 
 namespace CoreBackendApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration,IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+            Configuration = builder.Build();
+            log.Debug("日志内容:StarUp（）：");
+            
         }
-
+        public static NLog.Logger log = NLog.LogManager.GetCurrentClassLogger();
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -92,8 +102,9 @@ namespace CoreBackendApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
+
+            loggerFactory.AddNLog();
+            env.ConfigureNLog("nlog.config");
 
             var audienceConfig = Configuration.GetSection("Audience");
             var symmetricKeyAsBase64 = audienceConfig["Secret"];

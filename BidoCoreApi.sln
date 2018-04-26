@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidoCoreBackendApi", "BidoCoreBackendApi\BidoCoreBackendApi.csproj", "{4B42185B-B319-4625-B701-10317864E6C6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBackendApi", "CoreBackendApi\CoreBackendApi.csproj", "{7762A005-CC9A-4995-8FBF-2671B5F89849}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4B42185B-B319-4625-B701-10317864E6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B42185B-B319-4625-B701-10317864E6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B42185B-B319-4625-B701-10317864E6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B42185B-B319-4625-B701-10317864E6C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7762A005-CC9A-4995-8FBF-2671B5F89849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7762A005-CC9A-4995-8FBF-2671B5F89849}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7762A005-CC9A-4995-8FBF-2671B5F89849}.Release|Any CPU.ActiveCfg = Release|Any CPU
