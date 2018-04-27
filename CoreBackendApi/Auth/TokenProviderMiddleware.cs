@@ -88,19 +88,35 @@ namespace CoreBackendApi.Auth
         /// <returns></returns>
         private async Task GenerateAuthorizedResult(HttpContext context)
         {
+            var appcode = context.Request.Form["appcode"];
             var username = context.Request.Form["username"];
             var password = context.Request.Form["password"];
-
-            var identity = await GetIdentity(username, password);
-            if (identity == null)
+            if (string.IsNullOrEmpty(appcode))
             {
-                await ReturnBadRequest(context);
-                return;
-            }
+                var identity = await GetIdentity(username, password);
+                if (identity == null)
+                {
+                    await ReturnBadRequest(context);
+                    return;
+                }
 
-            // Serialize and return the response
-            context.Response.ContentType = "application/json";
-            await context.Response.WriteAsync(GetJwt(username));
+                // Serialize and return the response
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync(GetJwt(username));
+            }
+            else
+            {
+                var identity = await GetIdentity(appcode);
+                if (identity == null)
+                {
+                    await ReturnBadRequest(context);
+                    return;
+                }
+
+                // Serialize and return the response
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync(GetJwt(appcode));
+            }
         }
 
         /// <summary>
@@ -111,11 +127,23 @@ namespace CoreBackendApi.Auth
         /// <returns></returns>
         private Task<ClaimsIdentity> GetIdentity(string username, string password)
         {
-            var isValidated = _service.Auth(username, password);
+            var isValidated = _service.AuthUserPwd(username, password);
 
             if (isValidated)
             {
                 return Task.FromResult(new ClaimsIdentity(new System.Security.Principal.GenericIdentity(username, "Token"), new Claim[] { }));
+
+            }
+            return Task.FromResult<ClaimsIdentity>(null);
+        }
+
+        private Task<ClaimsIdentity> GetIdentity(string appcode)
+        {
+            var isValidated = _service.AuthApp(appcode);
+
+            if (isValidated)
+            {
+                return Task.FromResult(new ClaimsIdentity(new System.Security.Principal.GenericIdentity(appcode, "Token"), new Claim[] { }));
 
             }
             return Task.FromResult<ClaimsIdentity>(null);
@@ -174,7 +202,9 @@ namespace CoreBackendApi.Auth
                 expires_in = (int)_options.Expiration.TotalSeconds,
                 token_type = "Bearer"
             };
-            return JsonConvert.SerializeObject(response, new JsonSerializerSettings { Formatting = Formatting.Indented });
+            string jwtToken= JsonConvert.SerializeObject(response, new JsonSerializerSettings { Formatting = Formatting.Indented });
+            //jwtToken = JsonConvert.SerializeObject(response, new JsonSerializerSettings { Formatting = Formatting.None });
+            return jwtToken;
         }
     }
 }

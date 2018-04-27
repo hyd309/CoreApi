@@ -28,7 +28,6 @@ namespace CoreBackendApi
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
             Configuration = builder.Build();
-            log.Debug("日志内容:StarUp（）：");
             
         }
         public static NLog.Logger log = NLog.LogManager.GetCurrentClassLogger();
@@ -118,7 +117,12 @@ namespace CoreBackendApi
                 SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256)
             });
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=values}/{action=Index}/{id?}");
+            });
         }
     }
 }

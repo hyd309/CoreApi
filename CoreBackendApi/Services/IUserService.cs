@@ -7,6 +7,8 @@ namespace CoreBackendApi.Services
 {
     public interface IUserService
     {
-        bool Auth(string username, string password);
+        bool AuthUserPwd(string username, string password);
+
+        bool AuthApp(string appcode);
     }
 }

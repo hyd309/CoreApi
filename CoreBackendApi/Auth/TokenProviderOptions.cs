@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 namespace CoreBackendApi.Auth
 {
     public class TokenProviderOptions
-    {/// <summary>
-     /// 请求路径
-     /// </summary>
+    {
+
+        /// <summary>
+        /// 请求路径 http://localhost:51587/api/Token
+        /// body里面，添加参数：appcode；或者 用户名、密码两种新式进行访问授权
+        /// </summary>
         public string Path { get; set; } = "/Api/Token";
 
         public string Issuer { get; set; }
@@ -18,7 +21,7 @@ namespace CoreBackendApi.Auth
         /// <summary>
         /// 过期时间
         /// </summary>
-        public TimeSpan Expiration { get; set; } = TimeSpan.FromMinutes(60);
+        public TimeSpan Expiration { get; set; } = TimeSpan.FromHours(36);
 
         public SigningCredentials SigningCredentials { get; set; }
     }

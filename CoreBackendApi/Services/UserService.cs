@@ -7,7 +7,13 @@ namespace CoreBackendApi.Services
 {
     public class UserService : IUserService
     {
-        public bool Auth(string username, string password)
+        public bool AuthUserPwd(string username, string password)
+        {
+
+            return true;
+        }
+
+        public bool AuthApp(string appcode)
         {
 
             return true;

@@ -19,6 +19,11 @@ namespace CoreBackendApi.Controllers
         {
             return new string[] { "value1", "value2" };
         }
+       [Route("index")]
+        public string Index()
+        {
+            return "Bido API接口";
+        }
 
         // GET api/values/5
         [HttpGet("{id}")]
