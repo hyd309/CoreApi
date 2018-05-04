@@ -61,6 +61,10 @@ namespace CoreBackendApi.Auth
                 {
                     context.User = result.Principal;
                 }
+                else
+                {
+                    Startup.log.Trace("认证失败：result.Principal=null");
+                }
             }
             //
 
