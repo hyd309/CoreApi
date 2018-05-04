@@ -14,6 +14,14 @@ namespace CoreBackendApi.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class VehicleController : Controller
     {
+        /// <summary>
+        /// 车辆限行接口
+        /// </summary>
+        /// <param name="deveiceId">设备id</param>
+        /// <param name="longitude">精度</param>
+        /// <param name="latitude">维度</param>
+        /// <param name="date">日期</param>
+        /// <returns></returns>
         [HttpGet()]
         [Route("limit")]
         public string GetLimit(string deveiceId, string longitude, string latitude, string date)
@@ -27,7 +35,5 @@ namespace CoreBackendApi.Controllers
             //string str= HttpHelper.HttpGet(url, header);
             return JsonConvert.SerializeObject(new ResultMsg() { ResultCode = 0, Data = addCom });
         }
-
-
     }
 }
