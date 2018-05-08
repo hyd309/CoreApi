@@ -12,4 +12,11 @@ namespace CoreBackendApi.Common
         public string ResultTimes { get; set; }
         public object Data { get; set; }
     }
+
+    public enum CodeEnum
+    {
+        OK=0,
+        ErrParam=100,
+        ErrOther=200
+    }
 }

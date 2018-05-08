@@ -34,6 +34,7 @@ namespace CoreBackendApi.Controllers
             Startup.log.Trace("Trace=" + id);
             Startup.log.Warn("Warn=" + id);
             Startup.log.Error("Error=" + id);
+            Startup.log.Fatal("崩溃");
             return "value";
         }
 
