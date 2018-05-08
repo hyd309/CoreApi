@@ -1,0 +1,12 @@
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\bin\Debug\netcoreapp2.0\CoreImportDataApp.deps.json
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\bin\Debug\netcoreapp2.0\CoreImportDataApp.runtimeconfig.json
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\bin\Debug\netcoreapp2.0\CoreImportDataApp.runtimeconfig.dev.json
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\bin\Debug\netcoreapp2.0\CoreImportDataApp.dll
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\obj\Debug\netcoreapp2.0\CoreImportDataApp.csprojResolveAssemblyReference.cache
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\obj\Debug\netcoreapp2.0\CoreImportDataApp.csproj.CoreCompileInputs.cache
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\obj\Debug\netcoreapp2.0\CoreImportDataApp.AssemblyInfoInputs.cache
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\obj\Debug\netcoreapp2.0\CoreImportDataApp.AssemblyInfo.cs
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\bin\Debug\netcoreapp2.0\CoreImportDataApp.pdb
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\obj\Debug\netcoreapp2.0\CoreImportDataApp.dll
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\obj\Debug\netcoreapp2.0\CoreImportDataApp.pdb
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreImportDataApp\bin\Debug\netcoreapp2.0\appSetting.json
