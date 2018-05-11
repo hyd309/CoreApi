@@ -1,14 +1,18 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "a8441fe0df09a633a4d964280ed1d3c635b71119"
+    "signature": "85d20ab60686788ff90f644e56ddb91289759649"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "CoreImportDataApp/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.All": "2.0.8"
+          "Microsoft.AspNetCore.All": "2.0.8",
+          "NLog.Web.AspNetCore": "4.5.3",
+          "Aliyun.TableStore": "3.1.0.0",
+          "Google.ProtocolBuffers": "2.4.1.555",
+          "Google.ProtocolBuffers.Serialization": "2.4.1.555"
         },
         "runtime": {
           "CoreImportDataApp.dll": {}
@@ -1867,6 +1871,32 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "NLog/4.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Extensions.Logging/1.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "NLog": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Web.AspNetCore/4.5.3": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.3",
+          "Microsoft.AspNetCore.Http": "2.0.3",
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.3",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.0.3",
+          "NLog.Extensions.Logging": "1.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
+        }
+      },
       "Remotion.Linq/2.1.1": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -3195,6 +3225,21 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "Aliyun.TableStore/3.1.0.0": {
+        "runtime": {
+          "Aliyun.TableStore.dll": {}
+        }
+      },
+      "Google.ProtocolBuffers/2.4.1.555": {
+        "runtime": {
+          "Google.ProtocolBuffers.dll": {}
+        }
+      },
+      "Google.ProtocolBuffers.Serialization/2.4.1.555": {
+        "runtime": {
+          "Google.ProtocolBuffers.Serialization.dll": {}
+        }
       }
     }
   },
@@ -4352,6 +4397,27 @@
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
     },
+    "NLog/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8xX3ZFfZ9C68FJSG2exBbfUx9vWH01gdwcwPGwJ4EIeYqxEDFP793uj7vD1AvJ3Y7KW6KxL4iWiJF4+wPa5uJg==",
+      "path": "nlog/4.5.2",
+      "hashPath": "nlog.4.5.2.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jtdsNoMlp4kZJGqjshnVj+O7vRiecArorVl1AohC2IT7ovMpZsig+amwcAFlj89w9AQBH8MjnsTNyfclBvmpQg==",
+      "path": "nlog.extensions.logging/1.0.1",
+      "hashPath": "nlog.extensions.logging.1.0.1.nupkg.sha512"
+    },
+    "NLog.Web.AspNetCore/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xSspNB7kqJSAaIl4Cjngpo6ZH7aBpCo1QEgbUYIFpvBQH5b2QOpmk/6A0NsVAJ/xSLOrEqz7+FZRxl98D+G8HQ==",
+      "path": "nlog.web.aspnetcore/4.5.3",
+      "hashPath": "nlog.web.aspnetcore.4.5.3.nupkg.sha512"
+    },
     "Remotion.Linq/2.1.1": {
       "type": "package",
       "serviceable": true,
@@ -5205,6 +5271,21 @@
       "sha512": "sha512-W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
+    },
+    "Aliyun.TableStore/3.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Google.ProtocolBuffers/2.4.1.555": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Google.ProtocolBuffers.Serialization/2.4.1.555": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

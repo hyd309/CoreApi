@@ -8,4 +8,4 @@ D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug
 D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\bin\Debug\netcoreapp2.0\CoreBackendApi.pdb
 D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.dll
 D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.pdb
-D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.csprojResolveAssemblyReference.cache
+D:\ProjectCode\C#Test\NetCore\netcoreWebApi\BidoCoreApi\CoreBackendApi\obj\Debug\netcoreapp2.0\CoreBackendApi.csprojAssemblyReference.cache
