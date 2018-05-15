@@ -13,8 +13,10 @@ using CoreBackendApi.Services;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using NLog.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using NLog.Web;
-using System.IO;
+using CoreBackendApi.Common;
+using CoreBackendApi.Models;
 
 namespace CoreBackendApi
 {
@@ -39,6 +41,8 @@ namespace CoreBackendApi
             #region 依赖注入
 
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ILocationService, LocationService>();
+
             #endregion
 
             #region 版本
@@ -91,6 +95,10 @@ namespace CoreBackendApi
                 o.TokenValidationParameters = tokenValidationParameters;
             });
             #endregion
+            
+            services.AddDbContext<BidoContext>(o=>o.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.Configure<TableStoreModel>(Configuration.GetSection("TableStore"));
+
             services.AddMvc();
         }
 
@@ -116,6 +124,8 @@ namespace CoreBackendApi
                 Issuer = audienceConfig["Issuer"],
                 SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256)
             });
+
+            app.UseMiddleware(typeof(ExceptionHandlerMiddleWare));
 
             app.UseMvc(routes =>
             {

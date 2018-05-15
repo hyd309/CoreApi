@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBackendApi", "CoreBackendApi\CoreBackendApi.csproj", "{7762A005-CC9A-4995-8FBF-2671B5F89849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreImportDataApp", "CoreImportDataApp\CoreImportDataApp.csproj", "{CCE85846-C5AF-4623-9496-0E1C43A4FB0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreImportDataApp", "CoreImportDataApp\CoreImportDataApp.csproj", "{CCE85846-C5AF-4623-9496-0E1C43A4FB0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
