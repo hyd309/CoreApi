@@ -57,7 +57,7 @@ namespace CoreBackendApi.TableStore
                     }
                     foreach (var attr in row.Attribute)
                     {
-                        if (attr.Key == "l")
+                        if (attr.Key == attribute)
                         {
                             byte[] lbyte = attr.Value.BinaryValue;
                             Dictionary<string, int> dictionary = ByteIntHelper.GetLocationByByte(lbyte);
