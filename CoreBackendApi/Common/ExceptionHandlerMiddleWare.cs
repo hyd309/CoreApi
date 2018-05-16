@@ -42,8 +42,9 @@ namespace CoreBackendApi.Common
 
         private static async Task WriteExceptionAsync(HttpContext context, Exception exception)
         {
+            _logger.LogCritical("方式："+context.Request.Method+"出错路由：" +context.Request.Path.Value);
             //记录日志
-            _logger.LogError(exception.GetBaseException().ToString());
+            _logger.LogCritical(exception.GetBaseException().ToString());
 
             //返回友好的提示
             var response = context.Response;

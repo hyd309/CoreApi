@@ -22,7 +22,7 @@ namespace CoreImportDataApp
              * 解析需要调用IServiceProvider的扩展方法GetService<T>()
              **/
             var builder = new ConfigurationBuilder()
-                .AddJsonFile("appSetting.json");
+                .AddJsonFile("appSetting.json",true,true);
             var configuration = builder.Build();
 
             SqlConnecting = configuration.GetConnectionString("DefaultConnection");

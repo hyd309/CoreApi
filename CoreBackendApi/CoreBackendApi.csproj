@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
-    <Folder Include="TableStore\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,9 +22,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Aliyun.TableStore">
+      <HintPath>TableStore\dll\Aliyun.TableStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>TableStore\dll\Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers.Serialization">
+      <HintPath>TableStore\dll\Google.ProtocolBuffers.Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

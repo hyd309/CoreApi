@@ -29,24 +29,32 @@ namespace CoreBackendApi.Controllers
         [Route("{deviceId}/{start}/{end}")]
         public string GetLocation(string deviceId, string start,string end)
         {
-            _logger.LogInformation("GetLocation(string deviceId, string start,string end)"+deviceId+" & "+start+" & "+end);
+            _logger.LogInformation("GetLocation(string deviceId="+deviceId+ " , string start= " + start+ " ,string end=  " + end);
+
+            if (string.IsNullOrEmpty(deviceId))
+            {
+                string errmsg = "deviceId参数错误，deviceId不能为空";
+                _logger.LogWarning(errmsg);
+                return JsonConvert.SerializeObject(new ResultMsg() { ResultCode = (int)CodeEnum.ErrParam, ErrorMsg = errmsg });
+            }
+
             DateTime dtStart = new DateTime();
             if(!DateTime.TryParse(start,out dtStart))
             {
-                string errmsg = "start参数错误：正确格式：2018-01-01 09:57";
+                string errmsg = "start参数错误：不能为空,正确格式：2018-01-01 09:57";
                 _logger.LogWarning(errmsg);
                 return JsonConvert.SerializeObject(new ResultMsg() { ResultCode = (int)CodeEnum.ErrParam,ErrorMsg= errmsg });
             }
             DateTime dtEnt = new DateTime();
             if (!DateTime.TryParse(end, out dtEnt))
             {
-                string errmsg = "end参数错误：正确格式：2018-01-01 09:57";
+                string errmsg = "end参数错误：不能为空,正确格式：2018-01-01 09:57";
                 _logger.LogWarning(errmsg);
                 return JsonConvert.SerializeObject(new ResultMsg() { ResultCode = (int)CodeEnum.ErrParam, ErrorMsg = errmsg });
             }
             if (dtEnt<dtStart)
             {
-                string errmsg = "结束时间大于开始时间";
+                string errmsg = "参数错误：end结束时间小于开始时间start";
                 _logger.LogWarning(errmsg);
                 return JsonConvert.SerializeObject(new ResultMsg() { ResultCode = (int)CodeEnum.ErrParam, ErrorMsg = errmsg });
             }
