@@ -63,7 +63,7 @@ namespace CoreBackendApi.Auth
                 }
                 else
                 {
-                    Startup.log.Trace("认证失败：result.Principal=null");
+                    Startup.log.Warn(context.Request.Path+" ["+context.Request.Method+"] 认证失败：result.Principal=null");
                 }
             }
             //
@@ -188,7 +188,7 @@ namespace CoreBackendApi.Auth
                 //角色
                 new Claim(ClaimTypes.Role,"a")
             };
-
+            //token 信息验证；expires：过期时间
             var jwt = new JwtSecurityToken(
                 issuer: _options.Issuer,
                 audience: _options.Audience,
