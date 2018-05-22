@@ -12,6 +12,8 @@ namespace CoreBackendApi.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class ValuesController : Controller
     {
+        NLog.Logger log = NLog.LogManager.GetCurrentClassLogger();
+
         // GET api/values
         [HttpGet]
         [Authorize]
@@ -29,12 +31,12 @@ namespace CoreBackendApi.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            Startup.log.Info("id="+id);
-            Startup.log.Debug("Debug=" + id);
-            Startup.log.Trace("Trace=" + id);
-            Startup.log.Warn("Warn=" + id);
-            Startup.log.Error("Error=" + id);
-            Startup.log.Fatal("崩溃");
+            log.Info("id="+id);
+            log.Debug("Debug=" + id);
+            log.Trace("Trace=" + id);
+            log.Warn("Warn=" + id);
+            log.Error("Error=" + id);
+            log.Fatal("崩溃");
             return "value";
         }
 
