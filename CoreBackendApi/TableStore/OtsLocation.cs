@@ -75,7 +75,7 @@ namespace CoreBackendApi.TableStore
             {
                 throw;
             }
-            return list;
+            return list.OrderBy(p=>p.gps_time).ToList();
         }
     }
 }
