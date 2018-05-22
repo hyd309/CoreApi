@@ -13,13 +13,11 @@ namespace CoreBackendApi.Services
     public class LocationService : ILocationService
     {
         private readonly BidoContext _bidoContext;
-        private readonly ILogger<LocationService> _logger;
         private readonly TableStoreModel tableStoreModel;
 
-        public LocationService(BidoContext bidoContext, ILogger<LocationService> logger, IOptions<TableStoreModel> option)
+        public LocationService(BidoContext bidoContext, IOptions<TableStoreModel> option)
         {
             _bidoContext = bidoContext;
-            _logger = logger;
             tableStoreModel = option.Value;
         }
 
