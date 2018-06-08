@@ -42,6 +42,8 @@ namespace CoreBackendApi
 
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ILocationService, LocationService>();
+            services.AddTransient<IRouteService, RouteService>();
+            services.AddTransient<IEventService, EventService>();
 
             #endregion
 

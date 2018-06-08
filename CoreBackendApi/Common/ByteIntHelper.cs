@@ -350,13 +350,12 @@ namespace CoreBackendApi.Common
         return lbyte;
     }
 
-    public static Dictionary<string, int> GetEventStatsByByte(byte[] lbyte)
+    public static Dictionary<int, int> GetEventStatsByByte(byte[] lbyte)
     {
-        Dictionary<string, int> dictionary = new Dictionary<string, int>();
+        Dictionary<int, int> dictionary = new Dictionary<int, int>();
         for (int i = 0; i < lbyte.Length; i = i + 3)
         {
-            dictionary.Add("Code", bytesToInt2(lbyte, i * 3, 1));
-            dictionary.Add("Num", bytesToInt2(lbyte, (i * 3) + 1, 2));
+            dictionary.Add(bytesToInt2(lbyte, i * 3, 1), bytesToInt2(lbyte, (i * 3) + 1, 2));
         }
         return dictionary;
     }
